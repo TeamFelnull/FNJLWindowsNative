@@ -1,6 +1,6 @@
 jni.h
 jni_md.h
-
+build
 ### C++ template
 # Prerequisites
 *.d

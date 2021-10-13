@@ -13,7 +13,15 @@ extern "C" {
  * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSpecialFolderPath
-  (JNIEnv *, jclass, jint);
+        (JNIEnv *, jclass, jint);
+
+/*
+ * Class:     dev_felnull_fnjl_jni_windows_WindowsNative
+ * Method:    getSystemFontFaceName
+ * Signature: (I)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSystemFontFaceName
+        (JNIEnv *, jclass, jint);
 
 #ifdef __cplusplus
 }
