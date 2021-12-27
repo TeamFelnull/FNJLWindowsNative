@@ -13,7 +13,7 @@ extern "C" {
  * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSpecialFolderPath
-        (JNIEnv *, jclass, jint);
+  (JNIEnv *, jclass, jint);
 
 /*
  * Class:     dev_felnull_fnjl_jni_windows_WindowsNative
@@ -21,7 +21,15 @@ JNIEXPORT jstring JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSpe
  * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSystemFontFaceName
-        (JNIEnv *, jclass, jint);
+  (JNIEnv *, jclass, jint);
+
+/*
+ * Class:     dev_felnull_fnjl_jni_windows_WindowsNative
+ * Method:    getOpenFileName
+ * Signature: (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[B
+ */
+JNIEXPORT jbyteArray JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getOpenFileName
+  (JNIEnv *, jclass, jlong, jstring, jstring, jstring, jstring, jstring, jint, jint);
 
 #ifdef __cplusplus
 }
