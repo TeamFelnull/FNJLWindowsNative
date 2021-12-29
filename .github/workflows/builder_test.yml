@@ -15,10 +15,10 @@ jobs:
           mkdir build/
           cmake -S . -B build/ -G"Visual Studio 16 2019" ..
           cmake --build build/
-          cd build/x64/Debug
+          cd build/x64/Debug/ALL_BUILD
           dir
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
           name: FNJLWindowsNative-Release
-          path: build/x64/Debug/FNJLNative.dll
+          path: build/x64/Debug/ALL_BUILD/FNJLNative.dll
