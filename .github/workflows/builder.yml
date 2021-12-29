@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: build
         run: |
-          cd C++/helloworld/
           mkdir build/
           cd build/
           cmake ..
