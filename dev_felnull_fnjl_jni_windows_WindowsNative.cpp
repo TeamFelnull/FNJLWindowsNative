@@ -11,7 +11,7 @@ JNICALL Java_dev_felnull_fnjln_jni_windows_WindowsNative_getSpecialFolderPath(JN
     SHGetSpecialFolderPath(NULL, path, num, 0);
     return env->NewStringUTF(path);
 }
-
+//cmake -B build-arm/ -G "Visual Studio 16 2019" -A ARM64 -DCMAKE_SYSTEM_NAME=Windows -DCMAKE_SYSTEM_VERSION=10.0 -DCMAKE_SYSTEM_PROCESSOR=ARM64 -DWITH_OPENCL=OFF -DWITH_FFMPEG=OFF -DWITH_CUDA=OFF -DBUILD_EXAMPLES=ON -DBUILD_TESTS=ON ..
 //http://www.neko.ne.jp/~freewing/software/windows_10_change_system_font/
 //https://www.tokovalue.jp/NonClientMetrics_U.htm
 LOGFONT getIconTitleFont(int num) {

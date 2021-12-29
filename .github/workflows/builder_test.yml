@@ -2,7 +2,7 @@ name: cmake-build
 on:
   push:
     tags:
-      - 'v*'
+      - 't*'
 jobs:
   build:
     runs-on: windows-latest
@@ -13,7 +13,7 @@ jobs:
           curl "https://cdn.discordapp.com/attachments/358878159615164416/925776793179418674/jni_md.h" -O
           curl "https://cdn.discordapp.com/attachments/358878159615164416/925776793389113374/jni.h" -O
           mkdir build/
-          cmake -S . -B build/ -G"MinGW Makefiles" ..
+          cmake -S . -B build/ -G"Visual Studio 16 2019" ..
           cmake --build build/
       - name: Upload artifact
         uses: actions/upload-artifact@v1
