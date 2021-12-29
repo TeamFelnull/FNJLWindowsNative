@@ -21,4 +21,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: FNJLWindowsNative-Release
-          path: build/x64/Debug/ALL_BUILD/FNJLNative.dll
+          path: build/Debug/FNJLNative.dll
