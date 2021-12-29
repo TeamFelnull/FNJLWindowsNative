@@ -5,6 +5,7 @@ on:
       - 'v*'
 jobs:
   build:
+    runs-on: windows-latest
     steps:
       - uses: lukka/get-cmake@latest
       - name: Restore artifacts, or setup vcpkg (do not install any package)
