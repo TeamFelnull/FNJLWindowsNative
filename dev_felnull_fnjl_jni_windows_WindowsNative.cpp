@@ -1,12 +1,12 @@
 #include "dev_felnull_fnjl_jni_windows_WindowsNative.h"
 #include <shlobj.h>
 #include <tchar.h>
-#include <string.h>
+#include <cstring>
 
 //https://www.wabiapp.com/WabiSampleSource/windows/sh_get_special_folder_path.html
 JNIEXPORT jstring
 
-JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSpecialFolderPath(JNIEnv *env, jclass, jint num) {
+JNICALL Java_dev_felnull_fnjln_jni_windows_WindowsNative_getSpecialFolderPath(JNIEnv *env, jclass, jint num) {
     TCHAR path[MAX_PATH];
     SHGetSpecialFolderPath(NULL, path, num, 0);
     return env->NewStringUTF(path);
@@ -39,7 +39,7 @@ LOGFONT getIconTitleFont(int num) {
 
 JNIEXPORT jstring
 
-JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getSystemFontFaceName(JNIEnv *env, jclass, jint num) {
+JNICALL Java_dev_felnull_fnjln_jni_windows_WindowsNative_getSystemFontFaceName(JNIEnv *env, jclass, jint num) {
     LOGFONT iconFont = getIconTitleFont(num);
     return env->NewStringUTF(iconFont.lfFaceName);
 }
@@ -82,7 +82,7 @@ char *getNoGarbledString(JNIEnv *env, jstring str) {
 }
 
 JNIEXPORT jbyteArray
-JNICALL Java_dev_felnull_fnjl_jni_windows_WindowsNative_getOpenFileName
+JNICALL Java_dev_felnull_fnjln_jni_windows_WindowsNative_getOpenFileName
         (JNIEnv *env, jclass, jlong hwndId, jstring jTitle, jstring jInitDir, jstring jInitName, jstring jDefExt,
          jstring jFilter, jint filterIndex, jint flags) {
     HWND hWnd = reinterpret_cast<HWND>(hwndId);
