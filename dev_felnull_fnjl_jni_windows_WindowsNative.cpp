@@ -2,7 +2,7 @@
 #include <shlobj.h>
 #include <tchar.h>
 #include <cstring>
-
+//https://github.com/glennrp/libpng/blob/libpng16/.appveyor.yml
 //https://www.wabiapp.com/WabiSampleSource/windows/sh_get_special_folder_path.html
 JNIEXPORT jstring
 
