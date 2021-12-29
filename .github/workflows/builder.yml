@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: build
         run: |
-          curl "https://cdn.discordapp.com/attachments/358878159615164416/925776793179418674/jni_md.h" -o
-          curl "https://cdn.discordapp.com/attachments/358878159615164416/925776793389113374/jni.h" -o
+          curl "https://cdn.discordapp.com/attachments/358878159615164416/925776793179418674/jni_md.h" -O
+          curl "https://cdn.discordapp.com/attachments/358878159615164416/925776793389113374/jni.h" -O
           mkdir build/
           dir
           cmake -S . -B build/ -G"MinGW Makefiles" ..
