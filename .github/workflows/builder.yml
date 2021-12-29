@@ -7,9 +7,10 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2
       - name: build
         run: |
-          ./mkdir build/
-          ./dir
-          ./cmake -S . -B build/ -G"MinGW Makefiles" ..
-          ./cmake --build build/
+          mkdir build/
+          dir
+          cmake -S . -B build/ -G"MinGW Makefiles" ..
+          cmake --build build/
