@@ -15,7 +15,7 @@ jobs:
           mkdir build/
           cmake -S . -B build/ -G"Visual Studio 16 2019" ..
           cmake --build build/
-          cd build
+          cd build/x64
           dir
       - name: Upload artifact
         uses: actions/upload-artifact@v1
