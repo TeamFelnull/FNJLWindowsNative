@@ -10,6 +10,5 @@ jobs:
       - name: build
         run: |
           mkdir build/
-          cd build/
-          cmake ..
-          make
+          cmake -S . -B build/ -G"MinGW Makefiles" ..
+          cmake --build build/
