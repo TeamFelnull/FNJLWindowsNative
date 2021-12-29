@@ -1,4 +1,4 @@
-name: run-cmake
+name: cmake-build
 on:
   push:
     tags:
@@ -7,12 +7,10 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: lukka/get-cmake@latest
-      - name: Restore artifacts, or setup vcpkg (do not install any package)
-        uses: lukka/run-vcpkg@v10
-
-      - name: Run CMake consuming CMakePresets.json and vcpkg.json by mean of vcpkg.
-        uses: lukka/run-cmake@v10
-        with:
-          configurePreset: 'ninja-multi-vcpkg'
-          buildPreset: 'ninja-multi-vcpkg'
+      - name: build
+        run: |
+          cd C++/helloworld/
+          mkdir build/
+          cd build/
+          cmake ..
+          make
